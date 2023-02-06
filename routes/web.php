@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\SchoolController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(SchoolController::class)->prefix('admin/school')->name('admin.')->middleware('auth')->group(function () {
+    Route::get('create','add')->name('school.add');
+    Route::post('create','create')->name('school.create');
+    Route::get('/','index')->name('school.index');
+    
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
