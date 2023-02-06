@@ -15,7 +15,7 @@ class SchoolController extends Controller
 
     public function create(Request$request)
     {
-        $this->validate($request,School::$rules);
+        $this->validate($request, School::$rules);
         $school = new School;
         $form = $request->all();
         
@@ -33,8 +33,8 @@ class SchoolController extends Controller
         if($cond_school !=''){
             $posts = School::where('sdhool',$cond_school)->get();
         }else{
-            $posts=school::all();
+            $posts=School::all();
         }
-        return view('sdmin.school.index',['posts' =>$posts,'cond_school'=>$cond_school]);
+        return view('admin.school.index',['posts' =>$posts,'cond_school'=>$cond_school]);
         }
 }

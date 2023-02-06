@@ -9,9 +9,7 @@ class School extends Model
 {
     use HasFactory;
     
-    protected $guarded = array('');
-    
-    public static $rukes =array(
+    public static $rules =array(
         'school' => 'required',
         'qualification' => 'required',
         'address' => 'required',

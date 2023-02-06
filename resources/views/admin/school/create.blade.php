@@ -37,7 +37,7 @@
                             <input type="text" class="form-control" name="URL" value="{{ old('URL') }}">
                         </div>
                     </div>
-                    <div class="form-grop row"></div>
+                    <div class="form-grop row">
                         <label class="col-md-2">住所</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="address" value="{{ old('address') }}">
@@ -46,7 +46,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">地区</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="address" value="{{ old('area') }}">
+                            <input type="text" class="form-control" name="area" value="{{ old('area') }}">
                         </div>
                     </div>
                     @csrf
