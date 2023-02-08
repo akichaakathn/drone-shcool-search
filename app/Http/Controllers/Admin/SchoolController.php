@@ -20,10 +20,11 @@ class SchoolController extends Controller
         $form = $request->all();
         
         unset($form['_token']);
+        
         $school->fill($form);
         $school->save();
         
-        return redirect('admin/profile/create');
+        return redirect('admin/school/create');
     }
 
 
@@ -35,6 +36,7 @@ class SchoolController extends Controller
         }else{
             $posts=School::all();
         }
+        
         return view('admin.school.index',['posts' =>$posts,'cond_school'=>$cond_school]);
         }
 }

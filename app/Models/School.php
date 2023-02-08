@@ -15,4 +15,6 @@ class School extends Model
         'address' => 'required',
         'area' => 'required',
         );
+    
+    protected $guarded = [];
 }

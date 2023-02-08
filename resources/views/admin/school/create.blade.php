@@ -24,11 +24,12 @@
                     <div class="form-group row">
                         <label class="col-md-2">認定資格</label>
                         <div class="col-md-10">
-                            <input type="radio" name="qualification" valu="JUIDA">JUIDA
-                            <input type="radio" name="qualification" valu="DPA">DPA
-                            <input type="radio" name="qualification" valu="DJI">DJI
-                            <input type="radio" name="qualification" valu="JDA">JDA
-                            <input type="radio" name="qualification" valu="others">その他
+                            <input type="radio" name="qualification" valu="JUIDA"><label for="JUIDA">JUIDA</label>
+                            <input type="radio" name="qualification" valu="DPA"><label for="DPA">DPA</label>
+                            <input type="radio" name="qualification" valu="DJI"><label for="DJI">DJI</label>
+                            <input type="radio" name="qualification" valu="JDA"><label for="JDA">JDA</label>
+                            <input type="radio" name="qualification" valu="others"><label for="その他">その他</label>
+                            
                         </div>
                     </div>
                     <div class="form-group row">

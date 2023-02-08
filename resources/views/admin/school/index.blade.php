@@ -42,6 +42,10 @@
                             @foreach($posts as $school)
                                 <tr>
                                     <th>{{ $school->school}}</th>
+                                    <th>{{ $school->qualification}}</th>
+                                    <th>{{ $school->URL}}</th>
+                                    <th>{{ $school->address}}</th>
+                                    <th>{{ $school->area}}</th>
                                     <th>{{ Str::limit($school->addres, 30) }}</td>
                                 </tr>
                             @endforeach
