@@ -46,8 +46,16 @@
                                     <th>{{ $school->URL}}</th>
                                     <th>{{ $school->address}}</th>
                                     <th>{{ $school->area}}</th>
-                                    <th>{{ Str::limit($school->addres, 30) }}</td>
+                                    <td>{{ Str::limit($school->addres, 30) }}</td>
                                 </tr>
+                                <td>
+                                    <div>
+                                        <a href="{{ route('admin.school.edit', ['school' => $school->school]) }}">編集</a>
+                                    </div>
+                                    <div>
+                                        <a href="{{ route('admin.school.delete', ['school' => $school->school]) }}">削除</a>
+                                    </div>
+                                </td>
                             @endforeach
                         </tbody>
                     </table>

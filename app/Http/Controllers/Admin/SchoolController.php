@@ -52,13 +52,24 @@ class SchoolController extends Controller
     public function update(Request $request)
     {
         $this->validate($request,School::$rules);
+        
         $school = School::find($request->school);
+        
         $school_form = $request->all();
         unset($school_form['_token']);
         
         $school->fill($school_form)->save();
         
         return redirect('admin/school');
+    }
+    
+    public function delete(Request $request)
+    {
+        $school = School::find($request->school);
+        
+        $school->delete();
+        
+        return redirect('admin/school/');
     }
         
 }

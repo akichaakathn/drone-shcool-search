@@ -18,6 +18,9 @@ Route::controller(SchoolController::class)->prefix('admin/school')->name('admin.
     Route::get('create','add')->name('school.add');
     Route::post('create','create')->name('school.create');
     Route::get('/','index')->name('school.index');
+    Route::get('edit','edit')->name('school.edit');
+    Route::post('edit','update')->name('school.update');
+    Route::get('delete','delete')->name('school.update');
     
 });
 Auth::routes();
