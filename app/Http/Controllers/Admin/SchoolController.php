@@ -38,5 +38,30 @@ class SchoolController extends Controller
         }
         
         return view('admin.school.index',['posts' =>$posts,'cond_school'=>$cond_school]);
+    }
+    
+    public function edit(Request $request)
+    {
+        $school = School::find($request->school);
+        if(empty($school)){
+            abort(404);
         }
+        return view('admin.school.edit',['school_form' =>$school]);
+    }
+    
+    public function update(Request $request)
+    {
+        $this->validate($request,School::$rules);
+        $school = School::find($request->school);
+        $school_form = $request->all();
+        unset($school_form['_token']);
+        
+        $school->fill($school_form)->save();
+        
+        return redirect('admin/school');
+    }
+        
+}
+    
+    
 }
