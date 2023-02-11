@@ -17,4 +17,9 @@ class School extends Model
         );
     
     protected $guarded = [];
+    
+    public function histories()
+    {
+        return $this->hasMany('App/Models/History');
+    }
 }

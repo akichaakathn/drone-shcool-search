@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\School;
+use App\MOdel\History;
+use Carbon\Carbon;
 
 class SchoolController extends Controller
 {
@@ -59,6 +61,11 @@ class SchoolController extends Controller
         unset($school_form['_token']);
         
         $school->fill($school_form)->save();
+        
+        $history = new History();
+        $history->news_id = $news->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
         
         return redirect('admin/school');
     }
