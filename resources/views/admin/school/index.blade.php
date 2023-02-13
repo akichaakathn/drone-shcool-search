@@ -50,10 +50,10 @@
                                 </tr>
                                 <td>
                                     <div>
-                                        <a href="{{ route('admin.school.edit', ['school' => $school->school]) }}">編集</a>
+                                        <a href="{{ route('admin.school.edit', ['id' => $school->id]) }}">編集</a>
                                     </div>
                                     <div>
-                                        <a href="{{ route('admin.school.delete', ['school' => $school->school]) }}">削除</a>
+                                        <a href="{{ route('admin.school.delete', ['id' => $school->id]) }}">削除</a>
                                     </div>
                                 </td>
                             @endforeach

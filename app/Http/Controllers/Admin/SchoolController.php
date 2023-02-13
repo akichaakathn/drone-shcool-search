@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\School;
-use App\MOdel\History;
+use App\Models\History;
 use Carbon\Carbon;
 
 class SchoolController extends Controller
@@ -44,7 +44,7 @@ class SchoolController extends Controller
     
     public function edit(Request $request)
     {
-        $school = School::find($request->school);
+        $school = School::find($request->id);
         if(empty($school)){
             abort(404);
         }
@@ -55,7 +55,7 @@ class SchoolController extends Controller
     {
         $this->validate($request,School::$rules);
         
-        $school = School::find($request->school);
+        $school = School::find($request->id);
         
         $school_form = $request->all();
         unset($school_form['_token']);
@@ -63,7 +63,7 @@ class SchoolController extends Controller
         $school->fill($school_form)->save();
         
         $history = new History();
-        $history->news_id = $news->id;
+        $history->school_school = $school->id;
         $history->edited_at = Carbon::now();
         $history->save();
         
@@ -82,4 +82,4 @@ class SchoolController extends Controller
 }
     
     
-}
+

@@ -20,7 +20,7 @@ Route::controller(SchoolController::class)->prefix('admin/school')->name('admin.
     Route::get('/','index')->name('school.index');
     Route::get('edit','edit')->name('school.edit');
     Route::post('edit','update')->name('school.update');
-    Route::get('delete','delete')->name('school.update');
+    Route::get('delete','delete')->name('school.delete');
     
 });
 Auth::routes();
