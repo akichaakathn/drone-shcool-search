@@ -12,7 +12,7 @@ class History extends Model
     protected $guarded = array('id');
     
     public static $rules =array(
-        'school_school'=>'required',
+        'school_id'=>'required',
         'edited_at'=>'required',
         );
 }

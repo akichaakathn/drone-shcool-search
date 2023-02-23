@@ -63,7 +63,7 @@ class SchoolController extends Controller
         $school->fill($school_form)->save();
         
         $history = new History();
-        $history->school_school = $school->id;
+        $history->school_id = $school->id;
         $history->edited_at = Carbon::now();
         $history->save();
         
@@ -72,7 +72,7 @@ class SchoolController extends Controller
     
     public function delete(Request $request)
     {
-        $school = School::find($request->school);
+        $school = School::find($request->id);
         
         $school->delete();
         
