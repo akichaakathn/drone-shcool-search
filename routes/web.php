@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\SchoolController;
+use App\Http\Controllers\SchoolController as PublicSchoolController;
 
 
 /*
@@ -26,3 +27,5 @@ Route::controller(SchoolController::class)->prefix('admin/school')->name('admin.
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

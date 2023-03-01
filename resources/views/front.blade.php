@@ -7,8 +7,8 @@
       <h1 class="title"><small>しずおか</small><br>ドローンスクール検索</h1>
       <nav class="header-nav">
         <ul class="nav_items nav-items">
-          <li class="nav-items_items"><a href="#">ドローンスクールって？</a>></li>
-          <li class="nav-items_items"><a href="#">費用と時間は？</a></li>
+          <li class="nav-items_items"><a href="#">ドローンスクールと資格</a>></li>
+          <li class="nav-items_items"><a href="#">費用と時間</a></li>
           <li class="nav-items_items"><a href="#">検索</a></li>
           <li class="nav-items_items"><a href="#">マイページ</a></li>
         </ul>
