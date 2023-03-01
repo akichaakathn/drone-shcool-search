@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('school');
             $table->string('qualification');
+            $table->string('qualification-2')->nullable();
             $table->string('URL')->nullable();
             $table->string('address');
             $table->string('area');

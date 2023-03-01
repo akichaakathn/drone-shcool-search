@@ -2,6 +2,26 @@
 
 @section('title','しずおかドローンスクール検索')
 
+@section('header')
+<header class ="page-header wrapper">
+      <h1 class="title"><small>しずおか</small><br>ドローンスクール検索</h1>
+      <nav class="header-nav">
+        <ul class="nav_items nav-items">
+          <li class="nav-items_items"><a href="#">ドローンスクールって？</a>></li>
+          <li class="nav-items_items"><a href="#">費用と時間は？</a></li>
+          <li class="nav-items_items"><a href="#">検索</a></li>
+          <li class="nav-items_items"><a href="#">マイページ</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
 @section('content')
 <div class="container">
     <div id="main">
@@ -28,11 +48,15 @@
       <div id="sub-img">
         <img class="Mthuji" src="C:\Users\Javas\Downloads\mount-fuji-g3650f82e7_1280.jpg" width="100%">
       </div>       
-      <div class="copy">
-        <p class="copy-black">”未来”を”今”へ</p>
-        <p class="copy-black">静岡から</p>
+      <div class="passing">
+          <div class="passing-box">
+            <div class="passing-bar">
+              <div class="passing-txt">
+                ”未来”を”今”へ<br>静岡から
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
-</div>
+  </div>
 @endsection
 
