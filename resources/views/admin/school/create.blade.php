@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">認定資格</label>
-                        <div class="col-md-10">
+                        <div class="col-md-13">
                             <input type="checkbox" name="qualification" value="JUIDA"{{ old('qualification'=='JUIDA'?'checked':'')}}><label for="JUIDA">JUIDA</label>
                             <input type="checkbox" name="qualification" value="DPA"{{ old('qualification'=='DPA'?'checked':'')}}><label for="DPA">DPA</label>
                             <input type="checkbox" name="qualification" value="DJI"{{ old('qualification'=='DJI'?'checked':'')}}><label for="DJI">DJI</label>
