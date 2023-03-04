@@ -56,7 +56,6 @@ nav{
         
         }
 
-            
         }
    
   @media (max-width: 599px) {
@@ -89,4 +88,13 @@ nav{
         right: 1rem;
         top: 1rem; } }
   
+//共通フッターcss
 
+footer{
+    background-color: black;
+    }
+footer p{
+    text-align: center;
+    color: white;
+    margin: 0;
+}
