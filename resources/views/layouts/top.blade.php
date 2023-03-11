@@ -12,7 +12,7 @@
         <link href="{{ secure_asset('css/.css') }}" rel="stylesheet">
     </head>
     <body>
-      @include('layouts.herder')
+      @include('layouts.header')
       @yield('content')
       @include('layouts.footer')
     </body>

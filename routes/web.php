@@ -28,4 +28,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/',[PublicSchoolController::class,'index'])->name('top');
+Route::get('/Q&A'[PublicSchoolController::class])->name('Q&A');
+Route::get('mypage'[PublicSchoolController::class,])->name('mypage');
+
 

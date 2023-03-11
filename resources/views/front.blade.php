@@ -1,17 +1,14 @@
-@extends('layouts.front')
-
-@section('title','しずおかドローンスクール検索'))
+@extends('layouts.top')
 
 @section('content')
 <div class="container">
     <div id="main">
       <div id="serach-nav">
-        <h2><span class ="line-cblue">ドローン技術を静岡県で学ぼう！</span></h2>
-        <h4>エリア別に検索できます</h4>
-        
-        <h3>中部</h3>
-        <nav>
-          <a href="#">静岡市</a>
+       <h2>様々な分野で活躍するドローン。<br>
+       これからの生活に欠かせなくなる技術です。<br>
+        静岡に設立されたドローンスクールをまとめてみました。<br>
+       あなたも学んでみませんか？
+          <a href="{{route('top',['address'=> '静岡'])}}">静岡市</a>
           <a href="#">清水市</a>
           <a href="#"></a>
           <a href="#"></a>
@@ -37,6 +34,12 @@
             </div>
           </div>
       </div>
+    <form action="#" class="search-form-005">
+    <label>
+        <input type="text" placeholder="キーワードを入力">
+    </label>
+    <button type="submit" aria-label="検索"></button>
+</form>
   </div>
 @endsection
 

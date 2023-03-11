@@ -34,7 +34,7 @@ class SchoolController extends Controller
     {
         $cond_school = $request->cond_school;
         if($cond_school !=''){
-            $posts = School::where('sdhool',$cond_school)->get();
+            $posts = School::where('school',$cond_school)->get();
         }else{
             $posts=School::all();
         }
