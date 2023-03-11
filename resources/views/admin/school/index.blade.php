@@ -43,6 +43,7 @@
                                 <tr>
                                     <th>{{ $school->school}}</th>
                                     <th>{{ $school->qualification}}</th>
+                                    <th>{{ $school->qualification2}}</th>
                                     <th>{{ $school->URL}}</th>
                                     <th>{{ $school->address}}</th>
                                     <th>{{ $school->area}}</th>
