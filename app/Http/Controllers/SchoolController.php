@@ -32,7 +32,11 @@ class SchoolController extends Controller
         }
     }); School::all()
     
-    if(is_array($request->input('area')))
+    if(is_array($request->input('area'))){
+        $query->where(function($q) use($request){
+            foreach($request->input('area') as $qalification){
+            $q->orWhere('area',$area);
+    }
     $articles = $school->get();
         return view('front',['posts' =>$posts]);
     }
